@@ -45,7 +45,12 @@ export function buildTypescriptFamilySyntax(hostSpec, embeddedSpecs) {
 ([_\$[:alpha:]][_\$[:alnum:]]*)?
 (\`)`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
-            'end': '`',
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing backtick. Without it,
+            // embedded grammar rules that match the indentation would
+            // win the earliest-position race against the end pattern and
+            // prevent the string from ever closing.
+            'end': String.raw`[ \t]*(\`)`,
             'beginCaptures': {
                 '1': { 'patterns': [{ 'include': `source.${suffix}#comment` }] },
                 '2': { 'name': `entity.name.function.tagged-template.${suffix}` },
@@ -77,7 +82,12 @@ export function buildTypescriptFamilySyntax(hostSpec, embeddedSpecs) {
                 '1': { 'name': `entity.name.function.tagged-template.${suffix}` },
                 '2': { 'name': `string.template.${suffix} punctuation.definition.string.template.begin.${suffix}` },
             },
-            'end': '`',
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing backtick. Without it,
+            // embedded grammar rules that match the indentation would
+            // win the earliest-position race against the end pattern and
+            // prevent the string from ever closing.
+            'end': String.raw`[ \t]*(\`)`,
             'endCaptures': {
                 '0': { 'name': `string.template.${suffix} punctuation.definition.string.template.end.${suffix}` },
             },

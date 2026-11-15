@@ -2,6 +2,8 @@
 .gitignore
 .vscode-test/**
 .vscode/**
+.mimosa/**
+**/.mimosa
 *.vsix
 **/node_modules
 images/*.svg

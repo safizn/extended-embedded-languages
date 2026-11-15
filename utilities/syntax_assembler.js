@@ -174,6 +174,22 @@ function regexpEscape(str) {
 }
 
 /**
+ * Resolve a path relative to a base directory and refuse anything that
+ * escapes the base directory.
+ * @param {string} baseDir - Directory the result must stay within
+ * @param {string} relative - Relative path fragment to resolve
+ * @returns {string} the resolved path, guaranteed inside baseDir
+ */
+function resolveWithin(baseDir, relative) {
+    const base = path.resolve(baseDir);
+    const target = path.resolve(base, relative);
+    if (target !== base && !target.startsWith(base + path.sep)) {
+        throw new Error(`Refusing path outside ${base}: ${relative}`);
+    }
+    return target;
+}
+
+/**
  * Generates all snippet files, given an array of host language
  * specifications and an array of embedded langauge specifications
  * Also updates package.json to point to these generated snippets
@@ -187,7 +203,7 @@ function generateAllSnippets(hostSpecs, embeddedSpecs, registerSnippets = false)
 
     hostSpecs.forEach((spec) => {
         // Generate the snippet file
-        const snippetPath = path.join(packageDir, SNIPPET_DIR, `${spec.vsname}.code-snippets`);
+        const snippetPath = resolveWithin(packageDir, path.join(SNIPPET_DIR, `${spec.vsname}.code-snippets`));
 
         const embeddedSnippets = embeddedSpecs.map((embedded) => {
             const snippetStart = (spec.snippet_start
@@ -251,7 +267,7 @@ function generateAllSyntaxes(hostSpecs, embeddedSpecs) {
 
     hostSpecs.forEach((spec) => {
         // Generate the syntax file
-        const syntaxPath = path.join(packageDir, SYNTAX_DIR, spec.file);
+        const syntaxPath = resolveWithin(packageDir, path.join(SYNTAX_DIR, spec.file));
         const syntax = spec.syntax_builder(spec, embeddedSpecs);
         fs.writeFileSync(syntaxPath, JSON.stringify(syntax, null, 2));
 

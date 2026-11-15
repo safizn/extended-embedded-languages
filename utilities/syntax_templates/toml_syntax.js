@@ -20,7 +20,12 @@ export function buildTomlSyntax(hostSpec, embeddedSpecs) {
             'begin': String.raw`(?x)
 (''') 
 (?= (?i:${embedded.comment_choice_re}) \b )`,
-            'end': String.raw`(\1)`,
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing quotes. Without it,
+            // host or embedded grammar rules that match the indentation
+            // would win the earliest-position race against the end
+            // pattern and prevent the string from ever closing.
+            'end': String.raw`[ \t]*(\1)`,
             'contentName': `meta.embedded.block.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
             'patterns': [{ 'include': `${embedded.root_scope}` }],
             'beginCaptures': {

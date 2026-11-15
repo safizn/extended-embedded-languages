@@ -15,7 +15,12 @@ export function buildRustSyntax(hostSpec, embeddedSpecs) {
             'comment': `${lang.name}-formatted raw strings`,
 
             'begin': String.raw`(/\*(?i:${lang.id_choice_re})\*/)\s*(b?r)(#*)(")`,
-            'end': String.raw`(")(\3)`,
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing quote. Without it, host
+            // or embedded grammar rules that match the indentation would
+            // win the earliest-position race against the end pattern and
+            // prevent the string from ever closing.
+            'end': String.raw`[ \t]*(")(\3)`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'patterns': [{ 'include': `${lang.root_scope}` }],
             'name': 'string.quoted.double.rust',

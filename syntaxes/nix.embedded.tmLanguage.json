@@ -15,7 +15,7 @@
         {
           "comment": "Batch-formatted strings",
           "begin": "(/\\*(?i:bat)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.bat.nix source.batchfile",
           "patterns": [
             {
@@ -40,7 +40,7 @@
         {
           "comment": "C++-formatted strings",
           "begin": "(/\\*(?i:cpp|c\\+\\+)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.cpp.nix source.cpp",
           "patterns": [
             {
@@ -65,7 +65,7 @@
         {
           "comment": "CSS-formatted strings",
           "begin": "(/\\*(?i:css)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.css.nix source.css",
           "patterns": [
             {
@@ -90,7 +90,7 @@
         {
           "comment": "HTML-formatted strings",
           "begin": "(/\\*(?i:html)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.html.nix text.html.derivative",
           "patterns": [
             {
@@ -115,7 +115,7 @@
         {
           "comment": "INI-formatted strings",
           "begin": "(/\\*(?i:ini)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.ini.nix source.ini",
           "patterns": [
             {
@@ -140,7 +140,7 @@
         {
           "comment": "Javascript-formatted strings",
           "begin": "(/\\*(?i:js|javascript)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.javascript.nix source.js",
           "patterns": [
             {
@@ -165,7 +165,7 @@
         {
           "comment": "JSON-formatted strings",
           "begin": "(/\\*(?i:json)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.json.nix source.json",
           "patterns": [
             {
@@ -190,7 +190,7 @@
         {
           "comment": "JSONC-formatted strings",
           "begin": "(/\\*(?i:jsonc)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.jsonc.nix source.json.comments",
           "patterns": [
             {
@@ -215,7 +215,7 @@
         {
           "comment": "Python-formatted strings",
           "begin": "(/\\*(?i:py|python)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.python.nix source.python",
           "patterns": [
             {
@@ -240,7 +240,7 @@
         {
           "comment": "Shell-formatted strings",
           "begin": "(/\\*(?i:sh|bash|shell|shellscript)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.shellscript.nix source.shell",
           "patterns": [
             {
@@ -265,7 +265,7 @@
         {
           "comment": "SQL-formatted strings",
           "begin": "(/\\*(?i:sql)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.sql.nix source.sql",
           "patterns": [
             {
@@ -290,7 +290,7 @@
         {
           "comment": "TOML-formatted strings",
           "begin": "(/\\*(?i:toml)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.toml.nix source.toml",
           "patterns": [
             {
@@ -315,7 +315,7 @@
         {
           "comment": "XML-formatted strings",
           "begin": "(/\\*(?i:xml)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.xml.nix text.xml",
           "patterns": [
             {
@@ -340,7 +340,7 @@
         {
           "comment": "YAML-formatted strings",
           "begin": "(/\\*(?i:yaml)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.yaml.nix source.yaml",
           "patterns": [
             {
@@ -365,7 +365,7 @@
         {
           "comment": "C-formatted strings",
           "begin": "(/\\*(?i:c)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.c.nix source.c",
           "patterns": [
             {
@@ -390,7 +390,7 @@
         {
           "comment": "HLSL-formatted strings",
           "begin": "(/\\*(?i:hlsl)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.hlsl.nix source.hlsl",
           "patterns": [
             {
@@ -415,7 +415,7 @@
         {
           "comment": "GLSL-formatted strings",
           "begin": "(/\\*(?i:glsl)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.glsl.nix source.glsl",
           "patterns": [
             {
@@ -440,7 +440,7 @@
         {
           "comment": "Metal-formatted strings",
           "begin": "(/\\*(?i:metal)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.metal.nix source.metal",
           "patterns": [
             {
@@ -465,7 +465,7 @@
         {
           "comment": "WGSL-formatted strings",
           "begin": "(/\\*(?i:wgsl)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.wgsl.nix source.wgsl",
           "patterns": [
             {
@@ -490,7 +490,7 @@
         {
           "comment": "Lua-formatted strings",
           "begin": "(/\\*(?i:lua)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.lua.nix source.lua",
           "patterns": [
             {
@@ -515,7 +515,7 @@
         {
           "comment": "Makefile-formatted strings",
           "begin": "(/\\*(?i:make|makefile)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.makefile.nix source.makefile",
           "patterns": [
             {
@@ -540,7 +540,7 @@
         {
           "comment": "GraphQL-formatted strings",
           "begin": "(/\\*(?i:graphql|gql)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.graphql.nix source.graphql",
           "patterns": [
             {
@@ -565,7 +565,7 @@
         {
           "comment": "TypeScript-formatted strings",
           "begin": "(/\\*(?i:typescript|ts)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.typescript.nix source.ts",
           "patterns": [
             {
@@ -590,7 +590,7 @@
         {
           "comment": "LaTeX-formatted strings",
           "begin": "(/\\*(?i:latex)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.latex.nix text.tex.latex",
           "patterns": [
             {
@@ -615,7 +615,7 @@
         {
           "comment": "TeX-formatted strings",
           "begin": "(/\\*(?i:tex)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.tex.nix text.tex",
           "patterns": [
             {
@@ -640,7 +640,7 @@
         {
           "comment": "Graphviz-formatted strings",
           "begin": "(/\\*(?i:graphviz|dot)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.dot.nix source.dot",
           "patterns": [
             {
@@ -665,7 +665,7 @@
         {
           "comment": "ARM Assembly-formatted strings",
           "begin": "(/\\*(?i:arm)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.arm.nix source.arm",
           "patterns": [
             {
@@ -690,7 +690,7 @@
         {
           "comment": "x86 / x64 Assembly-formatted strings",
           "begin": "(/\\*(?i:x86|x86_64|x64)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.asm-intel-x86-generic.nix source.asm.x86_64",
           "patterns": [
             {
@@ -715,7 +715,7 @@
         {
           "comment": "Handlebars-formatted strings",
           "begin": "(/\\*(?i:hbs|handlebars)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.handlebars.nix text.html.handlebars",
           "patterns": [
             {
@@ -740,7 +740,7 @@
         {
           "comment": "PowerShell-formatted strings",
           "begin": "(/\\*(?i:ps1|powershell)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.powershell.nix source.powershell",
           "patterns": [
             {
@@ -765,7 +765,7 @@
         {
           "comment": "Markdown-formatted strings",
           "begin": "(/\\*(?i:md|markdown)\\*/)\\s*(\\'\\')",
-          "end": "\\'\\'(?!\\$|\\'|\\\\.)",
+          "end": "[ \\t]*\\'\\'(?!\\$|\\'|\\\\.)",
           "contentName": "meta.embedded.block.Markdown.nix text.html.markdown",
           "patterns": [
             {

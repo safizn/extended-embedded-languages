@@ -19,7 +19,7 @@
           "comment": "Batch formatted template strings",
           "begin": "(?x)\n(/\\*(?i:bat)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.bat.javascriptreact source.batchfile",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -56,7 +56,7 @@
           "comment": "C++ formatted template strings",
           "begin": "(?x)\n(/\\*(?i:cpp|c\\+\\+)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.cpp.javascriptreact source.cpp",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -93,7 +93,7 @@
           "comment": "CSS formatted template strings",
           "begin": "(?x)\n(/\\*(?i:css)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.css.javascriptreact source.css",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -130,7 +130,7 @@
           "comment": "HTML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:html)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.html.javascriptreact text.html.derivative",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -167,7 +167,7 @@
           "comment": "INI formatted template strings",
           "begin": "(?x)\n(/\\*(?i:ini)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.ini.javascriptreact source.ini",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -204,7 +204,7 @@
           "comment": "Javascript formatted template strings",
           "begin": "(?x)\n(/\\*(?i:js|javascript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.javascript.javascriptreact source.js",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -241,7 +241,7 @@
           "comment": "JSON formatted template strings",
           "begin": "(?x)\n(/\\*(?i:json)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.json.javascriptreact source.json",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -278,7 +278,7 @@
           "comment": "JSONC formatted template strings",
           "begin": "(?x)\n(/\\*(?i:jsonc)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.jsonc.javascriptreact source.json.comments",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -315,7 +315,7 @@
           "comment": "Python formatted template strings",
           "begin": "(?x)\n(/\\*(?i:py|python)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.python.javascriptreact source.python",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -352,7 +352,7 @@
           "comment": "Shell formatted template strings",
           "begin": "(?x)\n(/\\*(?i:sh|bash|shell|shellscript)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.shellscript.javascriptreact source.shell",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -389,7 +389,7 @@
           "comment": "SQL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:sql)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.sql.javascriptreact source.sql",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -426,7 +426,7 @@
           "comment": "TOML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:toml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.toml.javascriptreact source.toml",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -463,7 +463,7 @@
           "comment": "XML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:xml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.xml.javascriptreact text.xml",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -500,7 +500,7 @@
           "comment": "YAML formatted template strings",
           "begin": "(?x)\n(/\\*(?i:yaml)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.yaml.javascriptreact source.yaml",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -537,7 +537,7 @@
           "comment": "C formatted template strings",
           "begin": "(?x)\n(/\\*(?i:c)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.c.javascriptreact source.c",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -574,7 +574,7 @@
           "comment": "HLSL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:hlsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.hlsl.javascriptreact source.hlsl",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -611,7 +611,7 @@
           "comment": "GLSL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:glsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.glsl.javascriptreact source.glsl",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -648,7 +648,7 @@
           "comment": "Metal formatted template strings",
           "begin": "(?x)\n(/\\*(?i:metal)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.metal.javascriptreact source.metal",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -685,7 +685,7 @@
           "comment": "WGSL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:wgsl)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.wgsl.javascriptreact source.wgsl",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -722,7 +722,7 @@
           "comment": "Lua formatted template strings",
           "begin": "(?x)\n(/\\*(?i:lua)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.lua.javascriptreact source.lua",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -759,7 +759,7 @@
           "comment": "Makefile formatted template strings",
           "begin": "(?x)\n(/\\*(?i:make|makefile)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.makefile.javascriptreact source.makefile",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -796,7 +796,7 @@
           "comment": "GraphQL formatted template strings",
           "begin": "(?x)\n(/\\*(?i:graphql|gql)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.graphql.javascriptreact source.graphql",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -833,7 +833,7 @@
           "comment": "TypeScript formatted template strings",
           "begin": "(?x)\n(/\\*(?i:typescript|ts)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.typescript.javascriptreact source.ts",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -870,7 +870,7 @@
           "comment": "LaTeX formatted template strings",
           "begin": "(?x)\n(/\\*(?i:latex)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.latex.javascriptreact text.tex.latex",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -907,7 +907,7 @@
           "comment": "TeX formatted template strings",
           "begin": "(?x)\n(/\\*(?i:tex)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.tex.javascriptreact text.tex",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -944,7 +944,7 @@
           "comment": "Graphviz formatted template strings",
           "begin": "(?x)\n(/\\*(?i:graphviz|dot)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.dot.javascriptreact source.dot",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -981,7 +981,7 @@
           "comment": "ARM Assembly formatted template strings",
           "begin": "(?x)\n(/\\*(?i:arm)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.arm.javascriptreact source.arm",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -1018,7 +1018,7 @@
           "comment": "x86 / x64 Assembly formatted template strings",
           "begin": "(?x)\n(/\\*(?i:x86|x86_64|x64)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.asm-intel-x86-generic.javascriptreact source.asm.x86_64",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -1055,7 +1055,7 @@
           "comment": "Handlebars formatted template strings",
           "begin": "(?x)\n(/\\*(?i:hbs|handlebars)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.handlebars.javascriptreact text.html.handlebars",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -1092,7 +1092,7 @@
           "comment": "PowerShell formatted template strings",
           "begin": "(?x)\n(/\\*(?i:ps1|powershell)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.powershell.javascriptreact source.powershell",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -1129,7 +1129,7 @@
           "comment": "Markdown formatted template strings",
           "begin": "(?x)\n(/\\*(?i:md|markdown)\\*/)\n\\s*\n([_\\$[:alpha:]][_\\$[:alnum:]]*)?\n(\\`)",
           "contentName": "meta.embedded.block.Markdown.javascriptreact text.html.markdown",
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "beginCaptures": {
             "1": {
               "patterns": [
@@ -1179,7 +1179,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1203,7 +1203,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1227,7 +1227,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1251,7 +1251,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1275,7 +1275,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1299,7 +1299,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1323,7 +1323,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1347,7 +1347,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1371,7 +1371,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1395,7 +1395,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1419,7 +1419,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1443,7 +1443,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1467,7 +1467,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1491,7 +1491,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1515,7 +1515,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1539,7 +1539,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1563,7 +1563,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1587,7 +1587,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1611,7 +1611,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1635,7 +1635,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1659,7 +1659,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1683,7 +1683,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1707,7 +1707,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1731,7 +1731,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1755,7 +1755,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1779,7 +1779,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1803,7 +1803,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1827,7 +1827,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1851,7 +1851,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1875,7 +1875,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"
@@ -1899,7 +1899,7 @@
               "name": "string.template.js.jsx punctuation.definition.string.template.begin.js.jsx"
             }
           },
-          "end": "`",
+          "end": "[ \\t]*(\\`)",
           "endCaptures": {
             "0": {
               "name": "string.template.js.jsx punctuation.definition.string.template.end.js.jsx"

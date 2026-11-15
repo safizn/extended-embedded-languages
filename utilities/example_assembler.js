@@ -13,6 +13,22 @@ import { readEmbeddedSpecs } from './embedded_language_specs.js';
 const EXAMPLE_HOST_TEMPLATE_DIR = 'example_host_templates';
 const EXAMPLE_OUTPUT_DIR = path.join('..', 'examples');
 
+/**
+ * Resolve a path relative to a base directory and refuse anything that
+ * escapes the base directory.
+ * @param {string} baseDir - Directory the result must stay within
+ * @param {string} relative - Relative path fragment to resolve
+ * @returns {string} the resolved path, guaranteed inside baseDir
+ */
+function resolveWithin(baseDir, relative) {
+    const base = path.resolve(baseDir);
+    const target = path.resolve(base, relative);
+    if (target !== base && !target.startsWith(base + path.sep)) {
+        throw new Error(`Refusing path outside ${base}: ${relative}`);
+    }
+    return target;
+}
+
 const hostLanguages = [
     { template: 'cpp.ejs', output: 'example.cpp' },
     { template: 'go.ejs', output: 'example.go',
@@ -102,10 +118,10 @@ function main() {
             embedLang.code = applyEscapes(hostLang, embedLang.raw_code);
         });
 
-        const templatePath = path.join(EXAMPLE_HOST_TEMPLATE_DIR, hostLang.template);
+        const templatePath = resolveWithin(EXAMPLE_HOST_TEMPLATE_DIR, hostLang.template);
         const template = ejs.compile(fs.readFileSync(templatePath, 'utf-8'));
         fs.writeFileSync(
-            path.join(EXAMPLE_OUTPUT_DIR, hostLang.output),
+            resolveWithin(EXAMPLE_OUTPUT_DIR, hostLang.output),
             template({ snippets: embeddedLanguageSpecs }));
     });
 }

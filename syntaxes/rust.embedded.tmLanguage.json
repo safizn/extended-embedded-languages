@@ -15,7 +15,7 @@
         {
           "comment": "Batch-formatted raw strings",
           "begin": "(/\\*(?i:bat)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.bat.rust source.batchfile",
           "patterns": [
             {
@@ -49,7 +49,7 @@
         {
           "comment": "C++-formatted raw strings",
           "begin": "(/\\*(?i:cpp|c\\+\\+)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.cpp.rust source.cpp",
           "patterns": [
             {
@@ -83,7 +83,7 @@
         {
           "comment": "CSS-formatted raw strings",
           "begin": "(/\\*(?i:css)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.css.rust source.css",
           "patterns": [
             {
@@ -117,7 +117,7 @@
         {
           "comment": "HTML-formatted raw strings",
           "begin": "(/\\*(?i:html)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.html.rust text.html.derivative",
           "patterns": [
             {
@@ -151,7 +151,7 @@
         {
           "comment": "INI-formatted raw strings",
           "begin": "(/\\*(?i:ini)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.ini.rust source.ini",
           "patterns": [
             {
@@ -185,7 +185,7 @@
         {
           "comment": "Javascript-formatted raw strings",
           "begin": "(/\\*(?i:js|javascript)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.javascript.rust source.js",
           "patterns": [
             {
@@ -219,7 +219,7 @@
         {
           "comment": "JSON-formatted raw strings",
           "begin": "(/\\*(?i:json)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.json.rust source.json",
           "patterns": [
             {
@@ -253,7 +253,7 @@
         {
           "comment": "JSONC-formatted raw strings",
           "begin": "(/\\*(?i:jsonc)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.jsonc.rust source.json.comments",
           "patterns": [
             {
@@ -287,7 +287,7 @@
         {
           "comment": "Python-formatted raw strings",
           "begin": "(/\\*(?i:py|python)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.python.rust source.python",
           "patterns": [
             {
@@ -321,7 +321,7 @@
         {
           "comment": "Shell-formatted raw strings",
           "begin": "(/\\*(?i:sh|bash|shell|shellscript)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.shellscript.rust source.shell",
           "patterns": [
             {
@@ -355,7 +355,7 @@
         {
           "comment": "SQL-formatted raw strings",
           "begin": "(/\\*(?i:sql)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.sql.rust source.sql",
           "patterns": [
             {
@@ -389,7 +389,7 @@
         {
           "comment": "TOML-formatted raw strings",
           "begin": "(/\\*(?i:toml)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.toml.rust source.toml",
           "patterns": [
             {
@@ -423,7 +423,7 @@
         {
           "comment": "XML-formatted raw strings",
           "begin": "(/\\*(?i:xml)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.xml.rust text.xml",
           "patterns": [
             {
@@ -457,7 +457,7 @@
         {
           "comment": "YAML-formatted raw strings",
           "begin": "(/\\*(?i:yaml)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.yaml.rust source.yaml",
           "patterns": [
             {
@@ -491,7 +491,7 @@
         {
           "comment": "C-formatted raw strings",
           "begin": "(/\\*(?i:c)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.c.rust source.c",
           "patterns": [
             {
@@ -525,7 +525,7 @@
         {
           "comment": "HLSL-formatted raw strings",
           "begin": "(/\\*(?i:hlsl)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.hlsl.rust source.hlsl",
           "patterns": [
             {
@@ -559,7 +559,7 @@
         {
           "comment": "GLSL-formatted raw strings",
           "begin": "(/\\*(?i:glsl)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.glsl.rust source.glsl",
           "patterns": [
             {
@@ -593,7 +593,7 @@
         {
           "comment": "Metal-formatted raw strings",
           "begin": "(/\\*(?i:metal)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.metal.rust source.metal",
           "patterns": [
             {
@@ -627,7 +627,7 @@
         {
           "comment": "WGSL-formatted raw strings",
           "begin": "(/\\*(?i:wgsl)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.wgsl.rust source.wgsl",
           "patterns": [
             {
@@ -661,7 +661,7 @@
         {
           "comment": "Lua-formatted raw strings",
           "begin": "(/\\*(?i:lua)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.lua.rust source.lua",
           "patterns": [
             {
@@ -695,7 +695,7 @@
         {
           "comment": "Makefile-formatted raw strings",
           "begin": "(/\\*(?i:make|makefile)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.makefile.rust source.makefile",
           "patterns": [
             {
@@ -729,7 +729,7 @@
         {
           "comment": "GraphQL-formatted raw strings",
           "begin": "(/\\*(?i:graphql|gql)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.graphql.rust source.graphql",
           "patterns": [
             {
@@ -763,7 +763,7 @@
         {
           "comment": "TypeScript-formatted raw strings",
           "begin": "(/\\*(?i:typescript|ts)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.typescript.rust source.ts",
           "patterns": [
             {
@@ -797,7 +797,7 @@
         {
           "comment": "LaTeX-formatted raw strings",
           "begin": "(/\\*(?i:latex)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.latex.rust text.tex.latex",
           "patterns": [
             {
@@ -831,7 +831,7 @@
         {
           "comment": "TeX-formatted raw strings",
           "begin": "(/\\*(?i:tex)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.tex.rust text.tex",
           "patterns": [
             {
@@ -865,7 +865,7 @@
         {
           "comment": "Graphviz-formatted raw strings",
           "begin": "(/\\*(?i:graphviz|dot)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.dot.rust source.dot",
           "patterns": [
             {
@@ -899,7 +899,7 @@
         {
           "comment": "ARM Assembly-formatted raw strings",
           "begin": "(/\\*(?i:arm)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.arm.rust source.arm",
           "patterns": [
             {
@@ -933,7 +933,7 @@
         {
           "comment": "x86 / x64 Assembly-formatted raw strings",
           "begin": "(/\\*(?i:x86|x86_64|x64)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.asm-intel-x86-generic.rust source.asm.x86_64",
           "patterns": [
             {
@@ -967,7 +967,7 @@
         {
           "comment": "Handlebars-formatted raw strings",
           "begin": "(/\\*(?i:hbs|handlebars)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.handlebars.rust text.html.handlebars",
           "patterns": [
             {
@@ -1001,7 +1001,7 @@
         {
           "comment": "PowerShell-formatted raw strings",
           "begin": "(/\\*(?i:ps1|powershell)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.powershell.rust source.powershell",
           "patterns": [
             {
@@ -1035,7 +1035,7 @@
         {
           "comment": "Markdown-formatted raw strings",
           "begin": "(/\\*(?i:md|markdown)\\*/)\\s*(b?r)(#*)(\")",
-          "end": "(\")(\\3)",
+          "end": "[ \\t]*(\")(\\3)",
           "contentName": "meta.embedded.block.Markdown.rust text.html.markdown",
           "patterns": [
             {

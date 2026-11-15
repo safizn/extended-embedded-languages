@@ -26,7 +26,12 @@ export function buildGoSyntax(hostSpec, embeddedSpecs) {
             },
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'patterns': [{ 'include': `${lang.root_scope}` }],
-            'end': '`',
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing backtick. Without it,
+            // embedded grammar rules that match the indentation would
+            // win the earliest-position race against the end pattern and
+            // prevent the string from ever closing.
+            'end': String.raw`[ \t]*(\`)`,
             'endCaptures': {
                 'name': 'punctuation.definition.string.end.go',
             },

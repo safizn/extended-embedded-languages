@@ -18,7 +18,12 @@ export function buildPythonSyntax(hostSpec, embeddedSpecs) {
 ( (?i:u|r|f|rf|fr|) )
 ('''|""")
 (?= (?i:${embedded.comment_choice_re}) \b )`,
-            'end': String.raw`(\2)`,
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing quotes. Without it,
+            // host or embedded grammar rules that match the indentation
+            // would win the earliest-position race against the end
+            // pattern and prevent the string from ever closing.
+            'end': String.raw`[ \t]*(\2)`,
             'contentName': `meta.embedded.block.${embedded.vsname}.${hostSpec.vsname} ${embedded.root_scope}`,
             'patterns': [{ 'include': `${embedded.root_scope}` }],
             'beginCaptures': {

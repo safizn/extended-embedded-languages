@@ -16,7 +16,7 @@
           "comment": "Batch-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:rem|@rem|::bat) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.bat.python source.batchfile",
           "patterns": [
             {
@@ -41,7 +41,7 @@
           "comment": "C++-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://cpp|//c\\+\\+) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.cpp.python source.cpp",
           "patterns": [
             {
@@ -66,7 +66,7 @@
           "comment": "CSS-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:/\\*css) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.css.python source.css",
           "patterns": [
             {
@@ -91,7 +91,7 @@
           "comment": "HTML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:<!DOCTYPE|<html|<!--html) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.html.python text.html.derivative",
           "patterns": [
             {
@@ -116,7 +116,7 @@
           "comment": "INI-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:;ini) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.ini.python source.ini",
           "patterns": [
             {
@@ -141,7 +141,7 @@
           "comment": "Javascript-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://js) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.javascript.python source.js",
           "patterns": [
             {
@@ -166,7 +166,7 @@
           "comment": "JSONC-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://jsonc) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.jsonc.python source.json.comments",
           "patterns": [
             {
@@ -191,7 +191,7 @@
           "comment": "Python-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#py) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.python.python source.python",
           "patterns": [
             {
@@ -216,7 +216,7 @@
           "comment": "Shell-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#sh|\\#bash|\\#shell|\\#!/bin/sh|\\#!/bin/bash|\\#!/usr/bin/env/sbash) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.shellscript.python source.shell",
           "patterns": [
             {
@@ -241,7 +241,7 @@
           "comment": "SQL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:--sql) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.sql.python source.sql",
           "patterns": [
             {
@@ -266,7 +266,7 @@
           "comment": "TOML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#toml) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.toml.python source.toml",
           "patterns": [
             {
@@ -291,7 +291,7 @@
           "comment": "XML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:<\\?xml|<\\?/sxml|<!--xml) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.xml.python text.xml",
           "patterns": [
             {
@@ -316,7 +316,7 @@
           "comment": "YAML-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#yaml) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.yaml.python source.yaml",
           "patterns": [
             {
@@ -341,7 +341,7 @@
           "comment": "C-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:/\\*c) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.c.python source.c",
           "patterns": [
             {
@@ -366,7 +366,7 @@
           "comment": "HLSL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://hlsl) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.hlsl.python source.hlsl",
           "patterns": [
             {
@@ -391,7 +391,7 @@
           "comment": "GLSL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://glsl) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.glsl.python source.glsl",
           "patterns": [
             {
@@ -416,7 +416,7 @@
           "comment": "Metal-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://metal) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.metal.python source.metal",
           "patterns": [
             {
@@ -441,7 +441,7 @@
           "comment": "WGSL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://wgsl) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.wgsl.python source.wgsl",
           "patterns": [
             {
@@ -466,7 +466,7 @@
           "comment": "Lua-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:--lua) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.lua.python source.lua",
           "patterns": [
             {
@@ -491,7 +491,7 @@
           "comment": "Makefile-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#make|\\#makefile|\\#!/usr/bin/make) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.makefile.python source.makefile",
           "patterns": [
             {
@@ -516,7 +516,7 @@
           "comment": "GraphQL-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#graphql|\\#gql) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.graphql.python source.graphql",
           "patterns": [
             {
@@ -541,7 +541,7 @@
           "comment": "TypeScript-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://ts|//typescript) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.typescript.python source.ts",
           "patterns": [
             {
@@ -566,7 +566,7 @@
           "comment": "LaTeX-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:%latex) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.latex.python text.tex.latex",
           "patterns": [
             {
@@ -591,7 +591,7 @@
           "comment": "TeX-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:%tex) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.tex.python text.tex",
           "patterns": [
             {
@@ -616,7 +616,7 @@
           "comment": "Graphviz-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i://graphviz|//dot) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.dot.python source.dot",
           "patterns": [
             {
@@ -641,7 +641,7 @@
           "comment": "ARM Assembly-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:@arm|;arm) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.arm.python source.arm",
           "patterns": [
             {
@@ -666,7 +666,7 @@
           "comment": "x86 / x64 Assembly-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:;x86|;x86_64|x64) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.asm-intel-x86-generic.python source.asm.x86_64",
           "patterns": [
             {
@@ -691,7 +691,7 @@
           "comment": "Handlebars-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:/\\*hbs|//hbs|/\\*handlebars|//handlebars) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.handlebars.python text.html.handlebars",
           "patterns": [
             {
@@ -716,7 +716,7 @@
           "comment": "PowerShell-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:\\#ps1|\\#powershell) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.powershell.python source.powershell",
           "patterns": [
             {
@@ -741,7 +741,7 @@
           "comment": "Markdown-formatted triple-quoted strings",
           "name": "string.quoted.multi.embedded.python",
           "begin": "(?x)\n( (?i:u|r|f|rf|fr|) )\n('''|\"\"\")\n(?= (?i:<!--md|<!--markdown) \\b )",
-          "end": "(\\2)",
+          "end": "[ \\t]*(\\2)",
           "contentName": "meta.embedded.block.Markdown.python text.html.markdown",
           "patterns": [
             {

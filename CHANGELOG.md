@@ -1,5 +1,9 @@
 # Change Log
 
+## [v1.3.1]
+
+* Fixed syntax highlighting breaking when the closing delimiter of an embedded block is indented (spaces or tabs before the closing `"#`, `'''`, backtick, etc.). The end patterns now also match starting at the leading indentation of the closing line, so host or embedded grammar rules that match that indentation can no longer win the earliest-match race against the end pattern and leave the string unterminated. Applies to the Rust, C++, Go, Python, TypeScript/JavaScript, TOML and Nix host languages. (PowerShell is unchanged: here-string terminators must be at column 0 by PowerShell's own syntax.)
+
 ## [v1.3.0]
 
 * Added `Powershell` and `nix` host languages (thanks to [@DaRacci](https://github.com/DaRacci) for the contributions)

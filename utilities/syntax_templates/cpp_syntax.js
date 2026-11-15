@@ -18,7 +18,12 @@ export function buildCppSyntax(hostSpec, embeddedSpecs) {
 ( (?:u|U|L|u8)? R ) " 
 ( (?i:${lang.id_choice_re}) \b [^\(]* ) 
 \(`,
-            'end': String.raw`\)(\2)"`,
+            // The leading [ \t]* lets the end pattern match starting at
+            // the indentation before the closing delimiter. Without it,
+            // embedded grammar rules that match the indentation would
+            // win the earliest-position race against the end pattern and
+            // prevent the string from ever closing.
+            'end': String.raw`[ \t]*\)(\2)"`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'patterns': [{ 'include': `${lang.root_scope}` }],
             'name': 'string.quoted.double.raw.embedded.cpp',
